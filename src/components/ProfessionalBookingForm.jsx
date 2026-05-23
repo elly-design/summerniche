@@ -9,6 +9,7 @@ const ProfessionalBookingForm = () => {
     lastName: '',
     email: '',
     phone: '',
+    countryCode: '+254',
     country: '',
     nationality: '',
     
@@ -48,7 +49,177 @@ const ProfessionalBookingForm = () => {
     'China', 'India', 'South Africa', 'Nigeria', 'Ghana', 'Uganda',
     'Tanzania', 'Rwanda', 'Burundi', 'Ethiopia', 'Somalia', 'Sudan',
     'Egypt', 'Morocco', 'Algeria', 'Tunisia', 'Libya', 'Brazil',
-    'Argentina', 'Chile', 'Peru', 'Mexico', 'Colombia', 'Venezuela'
+    'Argentina', 'Chile', 'Peru', 'Mexico', 'Colombia', 'Venezuela',
+    'Russia', 'South Korea', 'Singapore', 'Malaysia', 'Indonesia',
+    'Philippines', 'Thailand', 'Vietnam', 'Turkey', 'Pakistan',
+    'Afghanistan', 'Sri Lanka', 'Myanmar', 'Iran', 'Portugal',
+    'Finland', 'Sweden', 'Norway', 'Denmark', 'Austria', 'Switzerland',
+    'Belgium', 'Luxembourg', 'Ireland', 'Poland', 'Czech Republic',
+    'Slovakia', 'Hungary', 'Romania', 'Serbia', 'Croatia', 'Slovenia',
+    'Latvia', 'Lithuania', 'Estonia', 'Belarus', 'Ukraine',
+    'Azerbaijan', 'Georgia', 'Armenia', 'Moldova', 'Bulgaria',
+    'Greece', 'Cyprus', 'Saudi Arabia', 'United Arab Emirates', 'Oman',
+    'Qatar', 'Bahrain', 'Kuwait', 'Lebanon', 'Jordan', 'Syria',
+    'Iraq', 'Palestine', 'Israel', 'Iceland', 'Greenland', 'Jamaica',
+    'Bahamas', 'Trinidad and Tobago', 'Barbados', 'Costa Rica',
+    'El Salvador', 'Guatemala', 'Honduras', 'Nicaragua', 'Panama',
+    'Bolivia', 'Ecuador', 'French Guiana', 'Paraguay', 'Uruguay',
+    'Dominican Republic', 'Cuba', 'Haiti', 'Puerto Rico', 'Cook Islands',
+    'New Zealand', 'Papua New Guinea', 'Fiji', 'Palau', 'Samoa',
+    'New Caledonia', 'Tonga', 'Vanuatu', 'Niue', 'American Samoa',
+    'Wallis and Futuna', 'East Timor', 'Antarctica', 'Brunei', 'Nauru',
+    'Solomon Islands', 'French Polynesia', 'Micronesia', 'Marshall Islands',
+    'North Korea', 'Cambodia', 'Laos', 'Bangladesh', 'Taiwan',
+    'Maldives', 'Mongolia', 'Nepal', 'Tajikistan', 'Turkmenistan',
+    'Kyrgyzstan', 'Uzbekistan', 'Kazakhstan'
+  ]
+
+  const countryCodes = [
+    { code: '+254', country: 'Kenya' },
+    { code: '+1', country: 'United States' },
+    { code: '+44', country: 'United Kingdom' },
+    { code: '+1', country: 'Canada' },
+    { code: '+61', country: 'Australia' },
+    { code: '+49', country: 'Germany' },
+    { code: '+33', country: 'France' },
+    { code: '+39', country: 'Italy' },
+    { code: '+34', country: 'Spain' },
+    { code: '+31', country: 'Netherlands' },
+    { code: '+81', country: 'Japan' },
+    { code: '+86', country: 'China' },
+    { code: '+91', country: 'India' },
+    { code: '+27', country: 'South Africa' },
+    { code: '+234', country: 'Nigeria' },
+    { code: '+233', country: 'Ghana' },
+    { code: '+256', country: 'Uganda' },
+    { code: '+255', country: 'Tanzania' },
+    { code: '+250', country: 'Rwanda' },
+    { code: '+257', country: 'Burundi' },
+    { code: '+251', country: 'Ethiopia' },
+    { code: '+252', country: 'Somalia' },
+    { code: '+249', country: 'Sudan' },
+    { code: '+20', country: 'Egypt' },
+    { code: '+212', country: 'Morocco' },
+    { code: '+213', country: 'Algeria' },
+    { code: '+216', country: 'Tunisia' },
+    { code: '+218', country: 'Libya' },
+    { code: '+55', country: 'Brazil' },
+    { code: '+54', country: 'Argentina' },
+    { code: '+56', country: 'Chile' },
+    { code: '+51', country: 'Peru' },
+    { code: '+52', country: 'Mexico' },
+    { code: '+57', country: 'Colombia' },
+    { code: '+58', country: 'Venezuela' },
+    { code: '+7', country: 'Russia' },
+    { code: '+82', country: 'South Korea' },
+    { code: '+65', country: 'Singapore' },
+    { code: '+60', country: 'Malaysia' },
+    { code: '+62', country: 'Indonesia' },
+    { code: '+63', country: 'Philippines' },
+    { code: '+66', country: 'Thailand' },
+    { code: '+84', country: 'Vietnam' },
+    { code: '+90', country: 'Turkey' },
+    { code: '+92', country: 'Pakistan' },
+    { code: '+93', country: 'Afghanistan' },
+    { code: '+94', country: 'Sri Lanka' },
+    { code: '+95', country: 'Myanmar' },
+    { code: '+98', country: 'Iran' },
+    { code: '+351', country: 'Portugal' },
+    { code: '+358', country: 'Finland' },
+    { code: '+46', country: 'Sweden' },
+    { code: '+47', country: 'Norway' },
+    { code: '+45', country: 'Denmark' },
+    { code: '+43', country: 'Austria' },
+    { code: '+41', country: 'Switzerland' },
+    { code: '+32', country: 'Belgium' },
+    { code: '+352', country: 'Luxembourg' },
+    { code: '+353', country: 'Ireland' },
+    { code: '+48', country: 'Poland' },
+    { code: '+420', country: 'Czech Republic' },
+    { code: '+421', country: 'Slovakia' },
+    { code: '+36', country: 'Hungary' },
+    { code: '+40', country: 'Romania' },
+    { code: '+381', country: 'Serbia' },
+    { code: '+385', country: 'Croatia' },
+    { code: '+386', country: 'Slovenia' },
+    { code: '+371', country: 'Latvia' },
+    { code: '+370', country: 'Lithuania' },
+    { code: '+372', country: 'Estonia' },
+    { code: '+375', country: 'Belarus' },
+    { code: '+380', country: 'Ukraine' },
+    { code: '+994', country: 'Azerbaijan' },
+    { code: '+995', country: 'Georgia' },
+    { code: '+374', country: 'Armenia' },
+    { code: '+373', country: 'Moldova' },
+    { code: '+359', country: 'Bulgaria' },
+    { code: '+30', country: 'Greece' },
+    { code: '+357', country: 'Cyprus' },
+    { code: '+966', country: 'Saudi Arabia' },
+    { code: '+971', country: 'United Arab Emirates' },
+    { code: '+968', country: 'Oman' },
+    { code: '+974', country: 'Qatar' },
+    { code: '+973', country: 'Bahrain' },
+    { code: '+965', country: 'Kuwait' },
+    { code: '+961', country: 'Lebanon' },
+    { code: '+962', country: 'Jordan' },
+    { code: '+963', country: 'Syria' },
+    { code: '+964', country: 'Iraq' },
+    { code: '+970', country: 'Palestine' },
+    { code: '+972', country: 'Israel' },
+    { code: '+354', country: 'Iceland' },
+    { code: '+299', country: 'Greenland' },
+    { code: '+1', country: 'Jamaica' },
+    { code: '+1', country: 'Bahamas' },
+    { code: '+1', country: 'Trinidad and Tobago' },
+    { code: '+1', country: 'Barbados' },
+    { code: '+506', country: 'Costa Rica' },
+    { code: '+503', country: 'El Salvador' },
+    { code: '+502', country: 'Guatemala' },
+    { code: '+504', country: 'Honduras' },
+    { code: '+505', country: 'Nicaragua' },
+    { code: '+507', country: 'Panama' },
+    { code: '+591', country: 'Bolivia' },
+    { code: '+593', country: 'Ecuador' },
+    { code: '+594', country: 'French Guiana' },
+    { code: '+595', country: 'Paraguay' },
+    { code: '+598', country: 'Uruguay' },
+    { code: '+1', country: 'Dominican Republic' },
+    { code: '+53', country: 'Cuba' },
+    { code: '+1', country: 'Haiti' },
+    { code: '+509', country: 'Haiti' },
+    { code: '+1', country: 'Puerto Rico' },
+    { code: '+682', country: 'Cook Islands' },
+    { code: '+64', country: 'New Zealand' },
+    { code: '+675', country: 'Papua New Guinea' },
+    { code: '+679', country: 'Fiji' },
+    { code: '+680', country: 'Palau' },
+    { code: '+685', country: 'Samoa' },
+    { code: '+687', country: 'New Caledonia' },
+    { code: '+676', country: 'Tonga' },
+    { code: '+678', country: 'Vanuatu' },
+    { code: '+683', country: 'Niue' },
+    { code: '+684', country: 'American Samoa' },
+    { code: '+681', country: 'Wallis and Futuna' },
+    { code: '+670', country: 'East Timor' },
+    { code: '+672', country: 'Antarctica' },
+    { code: '+673', country: 'Brunei' },
+    { code: '+674', country: 'Nauru' },
+    { code: '+677', country: 'Solomon Islands' },
+    { code: '+689', country: 'French Polynesia' },
+    { code: '+691', country: 'Micronesia' },
+    { code: '+692', country: 'Marshall Islands' },
+    { code: '+850', country: 'North Korea' },
+    { code: '+855', country: 'Cambodia' },
+    { code: '+856', country: 'Laos' },
+    { code: '+880', country: 'Bangladesh' },
+    { code: '+886', country: 'Taiwan' },
+    { code: '+960', country: 'Maldives' },
+    { code: '+976', country: 'Mongolia' },
+    { code: '+977', country: 'Nepal' },
+    { code: '+992', country: 'Tajikistan' },
+    { code: '+993', country: 'Turkmenistan' },
+    { code: '+996', country: 'Kyrgyzstan' },
+    { code: '+998', country: 'Uzbekistan' }
   ]
 
   const services = {
@@ -393,16 +564,42 @@ const ProfessionalBookingForm = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange focus:border-orange ${
-                      errors.phone ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="+254 123 456 789"
-                  />
+                  <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                    <div className="relative flex-shrink-0 w-full sm:w-auto">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <select
+                        name="countryCode"
+                        value={formData.countryCode}
+                        onChange={handleInputChange}
+                        className="appearance-none pl-10 pr-8 py-3 border rounded-l-lg sm:rounded-l-lg rounded-lg focus:ring-2 focus:ring-orange focus:border-orange border-gray-300 bg-white cursor-pointer w-full sm:min-w-[160px] font-semibold text-gray-800 hover:border-orange-400 transition-colors"
+                      >
+                        {countryCodes.map((item, index) => (
+                          <option key={index} value={item.code}>
+                            {item.code}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className={`flex-1 px-4 py-3 border rounded-r-lg sm:rounded-r-lg rounded-lg focus:ring-2 focus:ring-orange focus:border-orange ${
+                        errors.phone ? 'border-red-500' : 'border-gray-300'
+                      } hover:border-orange-400 transition-colors w-full`}
+                      placeholder="123 456 789"
+                    />
+                  </div>
                   {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
                 </div>
               </div>
