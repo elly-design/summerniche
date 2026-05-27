@@ -234,6 +234,143 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Cancellation Policy Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-darkGray mb-4">Free Cancellation Policy</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              At Summer Niche Adventures, we understand that travel plans may change unexpectedly. To give our guests flexibility and confidence when booking with us, we offer the following cancellation policy:
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Free Cancellation */}
+            <div className="bg-green/10 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-green mb-4">Free Cancellation</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Guests may cancel their booking free of charge 30 days before the tour departure time
+              </p>
+            </div>
+
+            {/* Cancellation Charges */}
+            <div className="bg-orange/10 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-orange mb-4">Cancellation Charges</h3>
+              <p className="text-gray-700 mb-4">The following cancellation fees will apply after the free cancellation period:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Within 5 days before departure: 50% cancellation fee</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         On the departure day or no-show: 100% cancellation fee</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Refund Process */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-green mb-4">Refund Process</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Approved refunds will be processed within 7–14 business days</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Refunds will be made using the original payment method where possible</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Non-Refundable Items */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-orange mb-4">Non-Refundable Items</h3>
+              <p className="text-gray-700 mb-4">The following may be non-refundable once booked:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Park entry fees already purchased</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Hotel reservations with strict policies</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Changes to Bookings */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-green mb-4">Changes to Bookings</h3>
+              <p className="text-gray-700 mb-4">Guests may request:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Date changes</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Tour rescheduling</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Traveler name corrections</span>
+                </li>
+              </ul>
+              <p className="text-gray-700 mt-4 italic">Changes are subject to availability and possible supplier charges.</p>
+            </div>
+
+            {/* Weather & Force Majeure */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-orange mb-4">Weather & Force Majeure</h3>
+              <p className="text-gray-700 mb-4">If a tour is cancelled by the company due to:</p>
+              <ul className="space-y-2 text-gray-700 mb-4">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Extreme weather</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Government restrictions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Safety concerns</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Natural disasters</span>
+                </li>
+              </ul>
+              <p className="text-gray-700 mb-4">Guests will be offered:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         A full refund, or</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         An alternative tour/date</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Information */}
+            <div className="bg-green/10 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-green mb-4">Contact Information</h3>
+              <p className="text-gray-700 mb-4">For cancellations or booking assistance, please contact:</p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Email: info@summernicheadventures.com</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Phone/WhatsApp: +254 716561523</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Day Tours */}
+            <div className="bg-orange/10 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-orange mb-4">Day Tours</h3>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Day tours: Free cancellation up to 24 hours</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-gray-700 whitespace-pre-line">·         Luxury lodge safaris: 7–14 days due to hotel policies</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
