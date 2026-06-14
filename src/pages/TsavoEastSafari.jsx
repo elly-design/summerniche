@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 const TsavoEastSafari = () => {
   const safariDetails = {
-    title: "2 Days / 1 Night Private Safari to Tsavo East National Park from Mombasa/Diani/kilifi",
-    duration: "2 Days / 1 Night",
-    price: "From $450",
+    title: "3 Days / 2 Night Private Safari to Tsavo East National Park from Mombasa/Diani/kilifi",
+    price: "From $650",
     description: "Experience a short but exciting private safari to Tsavo East National Park, one of Kenya's largest and oldest national parks famous for red elephants, lions, giraffes, zebras, buffaloes, and diverse birdlife. This safari starts and ends in Mombasa/Diani and is ideal for travelers looking for a quick wildlife getaway from the Kenyan coast.",
     image: "/images/cheetah.jpg"
   }
@@ -18,8 +17,13 @@ const TsavoEastSafari = () => {
     },
     {
       day: 2,
+      title: "Tsavo East – Full Day Game Drive",
+      content: "Early morning game drive before breakfast, the best time to spot predators and other wildlife as animals are more active during cooler hours.\n\nReturn to the lodge for breakfast and then proceed for a full day game drive exploring different areas of the park. Visit Lugard Falls, the Mudanda Rock (famous for elephants), and the Yatta Plateau.\n\nEnjoy a picnic lunch in the wilderness before continuing your game drive in the afternoon. Search for the famous red elephants, lions, leopards, cheetahs, and various bird species.\n\nReturn to the lodge/camp before sunset for dinner and overnight stay."
+    },
+    {
+      day: 3,
       title: "Tsavo East – Mombasa",
-      content: "Early morning game drive before breakfast, the best time to spot predators and other wildlife as animals are more active during cooler hours.\n\nReturn to the lodge for breakfast, check out, and enjoy another en-route game drive as you exit the park.\n\nDepart for Mombasa with lunch stop en route (optional depending on return schedule). Arrive in Mombasa in the afternoon and drop off at your hotel, airport, or residence."
+      content: "Early morning game drive before breakfast for your final wildlife viewing opportunities.\n\nReturn to the lodge for breakfast, check out, and enjoy an en-route game drive as you exit the park.\n\nDepart for Mombasa with lunch stop en route (optional depending on return schedule). Arrive in Mombasa in the afternoon and drop off at your hotel, airport, or residence."
     }
   ]
 
@@ -27,7 +31,7 @@ const TsavoEastSafari = () => {
     "Transport in a private safari van/Land Cruiser",
     "Services of professional English-speaking driver guide",
     "Park entry fees to Tsavo East National Park",
-    "Accommodation for 1 night",
+    "Accommodation for 2 nights",
     "Meals on Full Board basis (Lunch, Dinner & Breakfast)",
     "Unlimited game drives",
     "Bottled drinking water during safari",
